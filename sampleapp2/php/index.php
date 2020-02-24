@@ -42,7 +42,7 @@ echo "<br />";
 <?php
 if (isset($_GET['id'])) {
 $id = $_GET['id'];
-$query1 = mysqli_query($conn,"select * from cbps where id=$emp_id");
+$query1 = mysqli_query($conn,"select * from cbps where id=$id");
 while ($row1 = mysqli_fetch_assoc($query1)) {
 //$query1 = mysql_query("select * from cbps where member_name=$id", $connection);
 //while ($row1 = mysql_fetch_array($query1)) {
