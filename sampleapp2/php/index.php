@@ -21,7 +21,7 @@
     //echo "Connection failed: " . $conn->connect_error;
     //}
 $host = 'db';
-$username = "root";
+$username = 'pk';
 $password = "12345";
 $dbname= 'team';
 // Create connection
