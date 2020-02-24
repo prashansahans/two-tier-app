@@ -34,14 +34,14 @@ if (!$conn) {
 //echo "Connected successfully";
 $query = mysqli_query($conn,"select * from cbps");
 while ($row = mysqli_fetch_array($query)) {
-echo "<b><a href='index.php?id={$row['emp_id']}'>{$row['emp_name']}</a></b>";
+echo "<b><a href='index.php?id={$row['id']}'>{$row['emp_name']}</a></b>";
 echo "<br />";
 }
 ?>
 </div>
 <?php
 if (isset($_GET['id'])) {
-$id = $_GET['emp_id'];
+$id = $_GET['id'];
 $query1 = mysqli_query($conn,"select * from cbps where id=$id");
 while ($row1 = mysqli_fetch_assoc($query1)) {
 //$query1 = mysql_query("select * from cbps where member_name=$id", $connection);
