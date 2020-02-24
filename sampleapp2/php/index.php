@@ -20,9 +20,9 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$host = 'db';
+$host = 'mysql';
 $username = 'pk';
-$password = "12345";
+$password = '12345';
 $dbname= 'team';
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $dbname);
