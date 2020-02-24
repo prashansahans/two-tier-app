@@ -12,7 +12,7 @@
 </div>
 <div class="divB">
 <div class="divD">
-<p>Click On Menu</p>
+<p>Click On Names</p>
 <?php
 //$connection = mysql_connect("db", "root", "12345"); // Establishing Connection with Server
 //$db = mysql_select_db("team_record", $connection); // Selecting Database
