@@ -36,7 +36,7 @@ border:dashed 1px #999
 }
 .divD {
 width:200px;
-height:480px;
+height:auto;
 padding:0 20px;
 float:left;
 background-color:#f0f8ff;
