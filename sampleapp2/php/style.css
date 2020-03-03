@@ -18,6 +18,7 @@ font-family:'Droid Serif',serif
 .divA {
 width:70%;
 float:left;
+height: auto;
 margin-top:30px
 }
 .form {
@@ -35,7 +36,7 @@ border:dashed 1px #999
 }
 .divD {
 width:200px;
-height:480px;
+height:auto;
 padding:0 20px;
 float:left;
 background-color:#f0f8ff;
@@ -61,7 +62,8 @@ color:#1F8DD6
 }
 a:hover {
 text-shadow:2px 2px 2px #cfcfcf;
-font-size:18px
+font-size:18px;
+color: #19197;
 }
 .clear {
 clear:both
