@@ -7,7 +7,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 40%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -41,7 +41,7 @@ button:hover {
 }
 
 img.avatar {
-  width: 40%;
+  width: 20%;
   border-radius: 50%;
 }
 
@@ -69,7 +69,7 @@ span.psw {
 <body>
 
 <h2>Login Form</h2>
-<div height="50px" width="50px">
+<div height="50px" width="50px" align="center">
 <form action="display.php" method="get" target="_blank">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
