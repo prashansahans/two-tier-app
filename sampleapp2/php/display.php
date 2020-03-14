@@ -34,7 +34,7 @@ if (!$conn) {
 //echo "Connected successfully";
 $query = mysqli_query($conn,"select * from cbps");
 while ($row = mysqli_fetch_array($query)) {
-echo "<b><a href='index.php?id={$row['id']}'>{$row['emp_name']}</a></b>";
+echo "<b><a href='display.php?id={$row['id']}'>{$row['emp_name']}</a></b>";
 echo "<br />";
 echo "<br />";
 }
