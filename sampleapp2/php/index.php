@@ -22,7 +22,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
 }
 
 button:hover {
@@ -61,7 +61,7 @@ span.psw {
      float: none;
   }
   .cancelbtn {
-     width: 100%;
+     width: 50%;
   }
 }
 </style>
