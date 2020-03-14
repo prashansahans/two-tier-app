@@ -8,7 +8,6 @@ form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
   width: 40%;
-  padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -45,9 +44,9 @@ img.avatar {
   border-radius: 50%;
 }
 
-.container {
+/* .container {
   padding: 16px;
-}
+} */
 
 span.psw {
   float: right;
