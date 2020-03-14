@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Team CBPS</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-<div class="maindiv">
-<div class="divA">
-<div class="title">
-<h2>Team Information</h2>
-</div>
-<div class="divB">
-<div class="divD">
-<p>Click On Names</p>
-<?php
-//$connection = mysql_connect("db", "root", "12345"); // Establishing Connection with Server
-//$db = mysql_select_db("team_record", $connection); // Selecting Database
-//MySQL Query to read data
-//if ($connection->connect_error) {
-    //echo "Connection failed: " . $conn->connect_error;
-    //}
-$host = 'mysql';
-$username = 'pk';
-$password = '12345';
-$dbname= 'team';
-// Create connection
-$conn = mysqli_connect($host, $username, $password, $dbname);
 
-// Check connection
-if (!$conn) {
-    echo "Connection failed: " . $mysqli_connect_error();
-}
-//echo "Connected successfully";
-$query = mysqli_query($conn,"select * from cbps");
-while ($row = mysqli_fetch_array($query)) {
-echo "<b><a href='index.php?id={$row['id']}'>{$row['emp_name']}</a></b>";
-echo "<br />";
-echo "<br />";
-}
-?>
-</div>
-<?php
-if (isset($_GET['id'])) {
-$id = $_GET['id'];
-$query1 = mysqli_query($conn,"select * from cbps where id=$id");
-while ($row1 = mysqli_fetch_assoc($query1)) {
-//$query1 = mysql_query("select * from cbps where member_name=$id", $connection);
-//while ($row1 = mysql_fetch_array($query1)) {
-	// output data of each row
-	 ?>
-<div class="form">
-<h2>---Details---</h2>
-<!-- Displaying Data Read From Database -->
-<span>Name:</span> <?php echo $row1['emp_name']; ?>
-<br>
-<span>Mentor Name:</span> <?php echo $row1['mentor_name']; ?>
-<br>
-<span>Worked On:</span> <?php echo $row1['worked_on']; ?>
-<br>
-<span>Currently Working On:</span> <?php echo $row1['currently_working']; ?>
-<br>
+<h2>Login Form</h2>
 
+<form action="display.php" method="get" target="_blank">
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
 
-</div>
-<?php
-}
-}
-?>
-<div class="clear"></div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    
+</form>
 
 </body>
 </html>
-
-
-
-
