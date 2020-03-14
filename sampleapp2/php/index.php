@@ -47,8 +47,6 @@ img.avatar {
 
 .container {
   padding: 16px;
-  height: 100px;
-  width: 100px;
 }
 
 span.psw {
