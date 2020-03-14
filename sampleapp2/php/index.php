@@ -68,7 +68,7 @@ span.psw {
 </head>
 <body>
 
-<h2>Login Form</h2>
+<h2 align="center">Login Form</h2>
 <div height="50px" width="50px" align="center">
 <form action="display.php" method="get" target="_blank">
   <div class="imgcontainer">
@@ -84,9 +84,9 @@ span.psw {
     <br>
     <button type="submit">Login</button>
     <br>
-    
+  </div>
 </form>
-  <div>
+  </div>
 
 </body>
 </html>
