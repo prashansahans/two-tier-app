@@ -29,7 +29,7 @@ $conn = mysqli_connect($host, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
-    echo "Connection failed: " . $mysqli_connect_error();
+    echo "Connection failed: " . mysqli_connect_error();
 }
 //echo "Connected successfully";
 $query = mysqli_query($conn,"select * from cbps");
