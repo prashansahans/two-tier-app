@@ -72,7 +72,7 @@ span.psw {
 
 <h2 align="center">Login Form</h2>
 <div align="center">
-<form action="display.php" method="get" target="_parent">
+<form action="display.php" method="get" target="_blank">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
