@@ -54,14 +54,18 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 <!-- Displaying Data Read From Database -->
 <span>Name:</span> <?php echo $row1['emp_name']; ?>
 <br>
+	<br>
 <span>Mentor Name:</span> <?php echo $row1['mentor_name']; ?>
 <br>
+	<br>
 <span>Worked On:</span> <?php echo $row1['worked_on']; ?>
 <br>
+	<br>
+
 <span>Currently Working On:</span> <?php echo $row1['currently_working']; ?>
 <br>
-
-
+	<br>
+	 <button type="button">EDIT!</button> 
 </div>
 <?php
 }
