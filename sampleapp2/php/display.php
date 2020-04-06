@@ -71,6 +71,7 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 	<script>
                function edit_func() {
 		       <textarea id="w3mission" rows="4" cols="50"></textarea>
+	</script>
 		       
 </div>
 <?php
