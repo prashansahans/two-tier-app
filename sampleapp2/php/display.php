@@ -65,7 +65,13 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 <span>Currently Working On:</span> <?php echo $row1['currently_working']; ?>
 <br>
 	<br>
-	 <button type="button">EDIT!</button> 
+	 <button type="button" onclick="edit_func()">EDIT!</button> 
+	<br>
+	<br>
+	<script>
+               function edit_func() {
+		       <textarea id="w3mission" rows="4" cols="50"></textarea>
+		       
 </div>
 <?php
 }
