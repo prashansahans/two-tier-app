@@ -20,10 +20,10 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$host = 'custom-mysql';
-$username = pk;
-$password = 12345;
-$dbname= team;
+$host = 'OPENSHIFT_MYSQL_SERVICE_HOST';
+$username = 'OPENSHIFT_MYSQL_USER';
+$password = 'OPENSHIFT_MYSQL_PASSWORD';
+$dbname= 'OPENSHIFT_MYSQL_DATABASE';
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
