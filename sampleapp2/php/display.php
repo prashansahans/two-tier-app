@@ -20,7 +20,7 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$host = 'custom-mysql';
+$host = 'OPENSHIFT_MYSQL_SERVICE_HOST';
 $username = 'OPENSHIFT_MYSQL_USER';
 $password = 'OPENSHIFT_MYSQL_PASSWORD';
 $dbname= 'OPENSHIFT_MYSQL_DATABASE';
