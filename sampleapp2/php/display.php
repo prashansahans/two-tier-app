@@ -21,8 +21,8 @@
     //echo "Connection failed: " . $conn->connect_error;
     //}
 $host = 'custom-mysql1';
-$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$username = pk;
+$password = '12345';
 $dbname= team;
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $dbname);
