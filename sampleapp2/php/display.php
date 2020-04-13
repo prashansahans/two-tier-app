@@ -21,8 +21,8 @@
     //echo "Connection failed: " . $conn->connect_error;
     //}
 $host = 'custom-mysql';
-$username = pk;
-$password = '12345';
+$username = 'cGsK';
+$password = 'MTIzNDUK';
 $dbname= team;
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $dbname);
