@@ -20,7 +20,7 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$host = 'custom-mysql1';
+$host = 'custom-mysql';
 $username = pk;
 $password = '12345';
 $dbname= team;
