@@ -20,12 +20,12 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$host = 'custom-mysql';
-$username = pk;
-$password = 12345;
-$dbname= team;
+//$host = 'custom-mysql';
+//$username = pk;
+//$password = 12345;
+//$dbname= team;
 // Create connection
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$conn = mysqli_connect($_ENV["MYSQL_SERVICE"],$_ENV['MYSQL_USER'],$_ENV['MYSQL_PASSWORD'],$_ENV['DATABASE_NAME']);
 
 // Check connection
 if (!$conn) {
