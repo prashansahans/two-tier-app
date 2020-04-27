@@ -20,14 +20,14 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-//$host = 'custom-mysql';
+$host = '$_ENV["MYSQL_SERVICE"]';
 $username = file_get_contents('/etc/app/user');
 $password = file_get_contents('/etc/app/pass');
-//$dbname= team;
+$dbname= '$_ENV["DATABASE_NAME"]';
 // Create connection
 echo $username;
 echo $password;
-$conn = mysqli_connect($_ENV["MYSQL_SERVICE"],$username, $password,$_ENV['DATABASE_NAME']);
+$conn = mysqli_connect($host,$username, $password,$dbname);
 
 // Check connection
 if (!$conn) {
