@@ -25,6 +25,8 @@ $username = file_get_contents('/etc/app/user');
 $password = file_get_contents('/etc/app/pass');
 //$dbname= team;
 // Create connection
+echo $username;
+echo $password;
 $conn = mysqli_connect($_ENV["MYSQL_SERVICE"],$username, $password,$_ENV['DATABASE_NAME']);
 
 // Check connection
