@@ -21,11 +21,11 @@
     //echo "Connection failed: " . $conn->connect_error;
     //}
 //$host = 'custom-mysql';
-//$username = pk;
-//$password = 12345;
+$username = file_get_contents('/etc/app/user');
+$password = file_get_contents('/etc/app/pass');
 //$dbname= team;
 // Create connection
-$conn = mysqli_connect($_ENV["MYSQL_SERVICE"],$_ENV['MYSQL_USER'],$_ENV['MYSQL_PASSWORD'],$_ENV['DATABASE_NAME']);
+$conn = mysqli_connect($_ENV["MYSQL_SERVICE"],$username, $password,$_ENV['DATABASE_NAME']);
 
 // Check connection
 if (!$conn) {
