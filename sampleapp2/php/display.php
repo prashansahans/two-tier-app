@@ -20,19 +20,21 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$username = file_get_contents('/etc/app/user');
-$password = file_get_contents('/etc/app/pass');
+$username = $_ENV['MYSQL_USER']
+	//file_get_contents('/etc/app/user');
+$password = $_ENV['MYSQL_PASSWORD']
+	//file_get_contents('/etc/app/pass');
 $dbname = $_ENV['DATABASE_NAME'];
 $host = $_ENV['MYSQL_SERVICE'];
 // Create connection
-echo $pwd;
+
 
 //echo $username;
 //echo $password;
 
 	
 //echo $dbname;
-$conn = mysqli_connect($host, $username, $pwd, $dbname);
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
