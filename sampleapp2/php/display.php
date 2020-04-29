@@ -29,7 +29,7 @@ echo $username;
 echo $password;
 echo $host;
 echo $dbname;
-$conn = mysqli_connect($host,$username, $password,$dbname);
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
