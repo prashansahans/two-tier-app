@@ -25,9 +25,8 @@ $password = file_get_contents('/etc/app/pass');
 $dbname = $_ENV['DATABASE_NAME'];
 $host = $_ENV['MYSQL_SERVICE'];
 // Create connection
-echo $host;
-$pwd=(int) $password;
 echo $pwd;
+
 //echo $username;
 //echo $password;
 
