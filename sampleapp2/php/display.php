@@ -23,7 +23,7 @@
 $host = $_ENV["MYSQL_SERVICE"];
 $username = file_get_contents('/etc/app/user');
 $password = file_get_contents('/etc/app/pass');
-$dbname= $_ENV["MYSQL_SERVICE"];
+$dbname= $_ENV["DATABASE_NAME"];
 // Create connection
 echo $username;
 echo $password;
