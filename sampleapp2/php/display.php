@@ -22,14 +22,14 @@
     //}
 $host = $_ENV["MYSQL_SERVICE"];
 $username = file_get_contents('/etc/app/user');
-$password = '12345'//file_get_contents('/etc/app/pass');
+$password = 'file_get_contents('/etc/app/pass')';
 $dbname= $_ENV["DATABASE_NAME"];
 // Create connection
 echo $username;
 echo $password;
 echo $host;
 echo $dbname;
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$conn = mysqli_connect($host, $username, $password);
 
 // Check connection
 if (!$conn) {
