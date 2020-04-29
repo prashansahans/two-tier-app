@@ -20,12 +20,12 @@
 //if ($connection->connect_error) {
     //echo "Connection failed: " . $conn->connect_error;
     //}
-$host = $_ENV["MYSQL_SERVICE"];
+$host = $_ENV['MYSQL_SERVICE'];
 $username = file_get_contents('/etc/app/user');
 $password = file_get_contents('/etc/app/pass');
-$dbname= $_ENV["DATABASE_NAME"];
+$dbname = $_ENV['DATABASE_NAME'];
 // Create connection
-	echo $host;
+echo $host;
 echo $username;
 echo $password;
 
