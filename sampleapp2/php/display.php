@@ -26,11 +26,11 @@ $dbname = $_ENV['DATABASE_NAME'];
 $host = $_ENV['MYSQL_SERVICE'];
 // Create connection
 echo $host;
-echo $username;
-echo $password;
+//echo $username;
+//echo $password;
 
 	
-echo $dbname;
+//echo $dbname;
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
 // Check connection
