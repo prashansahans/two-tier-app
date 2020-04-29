@@ -25,9 +25,10 @@ $username = file_get_contents('/etc/app/user');
 $password = file_get_contents('/etc/app/pass');
 $dbname= $_ENV["DATABASE_NAME"];
 // Create connection
+	echo $host;
 echo $username;
 echo $password;
-echo $host;
+
 	
 echo $dbname;
 $conn = mysqli_connect($host, $username, $password, $dbname);
