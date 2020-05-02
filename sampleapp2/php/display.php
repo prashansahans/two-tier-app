@@ -25,13 +25,13 @@ $username = file_get_contents('/etc/app/user');//$_ENV['MYSQL_USER'];
 $password = file_get_contents('/etc/app/pass'); //$_ENV['MYSQL_PASSWORD'];//file_get_contents('/etc/app/pass');
 $dbname = $_ENV['DATABASE_NAME'];
 $host = $_ENV['MYSQL_SERVICE'];
-$user = mysql_real_escape_string($username);
-$pwd = mysql_real_escape_string($password)
+$user = md5($username);
+$pwd = md5($password)
 // Create connection
 
 
-//echo $user;
-//echo $pwd;
+echo $user;
+echo $pwd;
 
 	
 //echo $dbname;
