@@ -18,8 +18,8 @@ $json_file=file_get_contents('/etc/app/creds.json');
 $json_var=json_decode($json_file, true);
 
 $host = $_ENV['MYSQL_SERVICE'];
-$username =$jsonvar[data][user];//file_get_contents('/etc/app/user');
-$password = $jsonvar[data][password];//file_get_contents('/etc/app/pass');
+$username =$jsonvar['data']['user'];//file_get_contents('/etc/app/user');
+$password = $jsonvar['data']['password'];//file_get_contents('/etc/app/pass');
 $dbname = $_ENV['DATABASE_NAME'];
 
 //$user = mysql_real_escape_string($username);
