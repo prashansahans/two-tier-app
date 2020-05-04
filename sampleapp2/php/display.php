@@ -14,18 +14,12 @@
 <div class="divD">
 <p>Click On Names</p>
 <?php
-$user=file_get_contents('/etc/app/user');
-putenv("MYSQL_USER=$user");
+$json_file=file_get_contents('/etc/app/creds.json');
+$json_var=json_decode($json_file, true);
 
-//$connection = mysql_connect("db", "root", "12345"); // Establishing Connection with Server
-//$db = mysql_select_db("team_record", $connection); // Selecting Database
-//MySQL Query to read data
-//if ($connection->connect_error) {
-    //echo "Connection failed: " . $conn->connect_error;
-    //}
 $host = $_ENV['MYSQL_SERVICE'];
-$username =$_ENV['MYSQL_USER'];//file_get_contents('/etc/app/user');
-$password = $_ENV['MYSQL_PASSWORD'];//file_get_contents('/etc/app/pass');
+$username =$jsonvar[data][user];//file_get_contents('/etc/app/user');
+$password = $jsonvar[data][password];//file_get_contents('/etc/app/pass');
 $dbname = $_ENV['DATABASE_NAME'];
 
 //$user = mysql_real_escape_string($username);
@@ -33,7 +27,8 @@ $dbname = $_ENV['DATABASE_NAME'];
 // Create connection
 
 
-echo $user;
+echo $username;
+echo $password;
 //echo $password;
 
 	
