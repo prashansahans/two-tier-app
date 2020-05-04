@@ -30,8 +30,8 @@ $host = $_ENV['MYSQL_SERVICE'];
 // Create connection
 
 
-//echo $user;
-//echo $pwd;
+echo $username;
+echo $password;
 
 	
 //echo $dbname;
