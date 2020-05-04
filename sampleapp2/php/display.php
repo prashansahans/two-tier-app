@@ -14,6 +14,9 @@
 <div class="divD">
 <p>Click On Names</p>
 <?php
+$user=file_get_contents('/etc/app/user');
+putenv("MYSQL_USER=$user");
+
 //$connection = mysql_connect("db", "root", "12345"); // Establishing Connection with Server
 //$db = mysql_select_db("team_record", $connection); // Selecting Database
 //MySQL Query to read data
