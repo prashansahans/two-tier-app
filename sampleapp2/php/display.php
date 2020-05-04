@@ -16,7 +16,7 @@
 <?php
 $json_file=file_get_contents('/etc/app/creds.json');
 $json_var=json_decode($json_file, true);
-echo $json_var;
+
 
 $host = $_ENV['MYSQL_SERVICE'];
 $username =$json_var['data']['user'];//file_get_contents('/etc/app/user');
@@ -26,10 +26,7 @@ $dbname = $_ENV['DATABASE_NAME'];
 //$user = mysql_real_escape_string($username);
 //$pwd = mysql_real_escape_string($password);
 // Create connection
-echo $json_var['data']['user'];
-
-echo $username;
-echo $password;
+;
 //echo $password;
 
 	
