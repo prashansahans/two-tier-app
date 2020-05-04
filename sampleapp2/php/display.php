@@ -33,8 +33,8 @@ $dbname = $_ENV['DATABASE_NAME'];
 // Create connection
 
 
-echo $username;
-echo $password;
+echo $user;
+//echo $password;
 
 	
 //echo $dbname;
