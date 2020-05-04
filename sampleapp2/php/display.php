@@ -25,7 +25,7 @@ $dbname = $_ENV['DATABASE_NAME'];
 //$user = mysql_real_escape_string($username);
 //$pwd = mysql_real_escape_string($password);
 // Create connection
-
+echo $jsonvar['data']['user'];
 
 echo $username;
 echo $password;
