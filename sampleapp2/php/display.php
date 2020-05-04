@@ -19,14 +19,14 @@ $json_var=json_decode($json_file, true);
 echo $json_var;
 
 $host = $_ENV['MYSQL_SERVICE'];
-$username =$jsonvar['data']['user'];//file_get_contents('/etc/app/user');
-$password = $jsonvar['data']['password'];//file_get_contents('/etc/app/pass');
+$username =$json_var['data']['user'];//file_get_contents('/etc/app/user');
+$password = $json_var['data']['password'];//file_get_contents('/etc/app/pass');
 $dbname = $_ENV['DATABASE_NAME'];
 
 //$user = mysql_real_escape_string($username);
 //$pwd = mysql_real_escape_string($password);
 // Create connection
-echo $jsonvar['data']['user'];
+echo $json_var['data']['user'];
 
 echo $username;
 echo $password;
