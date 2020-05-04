@@ -16,6 +16,7 @@
 <?php
 $json_file=file_get_contents('/etc/app/creds.json');
 $json_var=json_decode($json_file, true);
+echo $json_var;
 
 $host = $_ENV['MYSQL_SERVICE'];
 $username =$jsonvar['data']['user'];//file_get_contents('/etc/app/user');
