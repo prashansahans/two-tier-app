@@ -106,7 +106,7 @@ if(isset($_POST['submit']))
 {
 if($user==$username AND $pass==$password)
 {
-header("Location: display.php")
+header("Location: display.php");
 }
 else
 {
