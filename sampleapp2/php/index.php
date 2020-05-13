@@ -96,10 +96,11 @@ span.psw {
 <?php
 
 session_start();
-
+$json_file=file_get_contents('/etc/app/creds.json');
+$json_var=json_decode($json_file, true);
+$username =$json_var['data']['login_user'];
+$password = $json_var['data']['login_password'];
 $user = $_POST['uname'];
-$username='team';
-$password='cbps';
 $pass = $_POST['psw'];
 
 if(isset($_POST['submit']))
@@ -110,7 +111,9 @@ header("Location: display.php");
 }
 else
 {
+ <div align="center">
 echo "Wrong Username / Password.";
+  </div>
 }
 }
 
