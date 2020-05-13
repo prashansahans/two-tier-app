@@ -98,14 +98,15 @@ span.psw {
 session_start();
 
 $user = $_POST['uname'];
-
+$username='team';
+$password='cbps';
 $pass = $_POST['psw'];
 
 if(isset($_POST['submit']))
 {
-if($user=='me' AND $pass==123)
+if($user==$username AND $pass==$password)
 {
-echo "WElcome";
+header("Location: display.php")
 }
 else
 {
