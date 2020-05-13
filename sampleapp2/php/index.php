@@ -111,9 +111,8 @@ header("Location: display.php");
 }
 else
 {
- <div align="center">
 echo "Wrong Username / Password.";
-  </div>
+
 }
 }
 
