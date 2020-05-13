@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Login </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -72,7 +73,7 @@ span.psw {
 
 <h2 align="center">Login Form</h2>
 <div align="center">
-<form action="display.php" method="get" target="_blank">
+<form action="index.php" method="post" target="_blank">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
@@ -92,3 +93,25 @@ span.psw {
 
 </body>
 </html>
+<?php
+
+session_start();
+
+$user = $_POST['uname'];
+
+$pass = $_POST['psw'];
+
+if(isset($_POST['submit']))
+{
+if($user=='me' AND $pass==123)
+{
+echo "WElcome";
+}
+else
+{
+echo "Wrong Username / Password.";
+}
+}
+
+?> 
+
