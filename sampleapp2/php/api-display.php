@@ -17,7 +17,7 @@
 $OCP_TOKEN=file_get_contents('/var/run/secrets/kubernetes.io/serviceaccount/token'); 
 //echo $OCP_TOKEN;
 $data = array(
-	"jwt" => $OCP_TOKEN,
+	"jwt" => "'"$OCP_TOKEN"'",
 	"role" => "frontend-mysql"
 );
 $ch = curl_init();
