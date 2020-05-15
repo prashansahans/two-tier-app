@@ -31,7 +31,10 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 $result = curl_exec($ch);
 if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
+    
 }
+echo $result;	
+	
 curl_close($ch);
 echo $result;
 //echo $_ENV["X_VAULT_TOKEN"];
