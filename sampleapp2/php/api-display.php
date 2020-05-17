@@ -21,7 +21,6 @@ $data = array(
 	"role" => "frontend-mysql"
 );
 $json_data=json_encode($data);
-echo $json_data;
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/kubernetes/login');
