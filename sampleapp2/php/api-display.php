@@ -20,7 +20,7 @@ $data = array(
 	"jwt" => "'$OCP_TOKEN'",
 	"role" => "mysql-creds-roles"
 );
-$json_data=json_encode($data);
+$json_data=urlencode(json_encode($data));
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/kubernetes/login');
