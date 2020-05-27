@@ -28,7 +28,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "{
     },
     "ttl": "99999h",
     "renewable": true
-});
+}";
 
 $headers = array();
 $headers[] = 'X-Vault-Token: $Vault_TOKEN';
