@@ -71,3 +71,6 @@ clear:both
 span {
 font-weight:700
 }
+.log {
+  display: flex;
+  justify-content: "flex-end";
