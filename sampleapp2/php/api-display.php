@@ -122,6 +122,7 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 </div>
 <div class="clear"></div>
 </div>
+	<div class="log">Logout</div>
 </div>
 
 </body>
