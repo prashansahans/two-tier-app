@@ -46,7 +46,7 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
 
 $headers = array();
-$headers[] = ''X-Vault-Token:'.$client_token';
+$headers[] = 'X-Vault-Token:'.$client_token;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $final_result = curl_exec($ch);
