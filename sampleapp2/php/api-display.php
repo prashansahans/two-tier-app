@@ -126,14 +126,14 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 	
 	<div class="log">
 		
-			<a href='api-display.php?hello=true'>Logout</a></div>
+			<a href='index.php?hello=true'>Logout</a></div>
 		
 
 <?php
 if(isset($_GET['hello'])) { 
 
-	echo "Hello";
-	echo $client_token;
+	//echo "Hello";
+	//echo $client_token;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/revoke-self');
