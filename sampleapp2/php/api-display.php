@@ -133,7 +133,7 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 if(isset($_GET['hello'])) { 
 	runMyFunction();
 }
-	echo $client_token;
+	//echo $client_token;
 function runMyFunction(){
 	echo "Hello";
 	echo $client_token;
