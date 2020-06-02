@@ -124,7 +124,25 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 <div class="clear"></div>
 </div>
 	<div class="log"><input type="submit" name="logout" value="logout"/> </div>
-
+	<?php
+	 if(isset($_POST['logout'])) { 
+            echo "This is Button1 that is selected"; 
+	   
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/revoke-self');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+$headers = array();
+$headers[] = 'X-Vault-Token:'.$client_token;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+header('Location: index.php');
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+}
+curl_close($ch);
+} 
+	?>
 </div>
 	
 
