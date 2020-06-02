@@ -144,11 +144,12 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, array());
 $headers = array();
 $headers[] = 'X-Vault-Token:'.$client_token;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-$result = curl_exec($ch);
+$result1 = curl_exec($ch);
 if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
+echo $result1;
 } 
 ?>
 </div>
