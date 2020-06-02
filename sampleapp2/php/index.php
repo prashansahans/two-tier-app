@@ -150,6 +150,7 @@ if(isset($_POST['submit']))
 {
 if($user==$username AND $pass==$password)
 {
+$_SESSION['logged_in'] = true;
 header("Location: api-display.php");
 }
 else
