@@ -123,7 +123,7 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 </div>
 <div class="clear"></div>
 </div>
-	<div class="log"><a href="logout.php" name="logout">Logout</a></div>
+	<div class="log"><input type="submit" name="logout" value="logout"/> </div>
 
 </div>
 	
