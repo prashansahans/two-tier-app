@@ -145,6 +145,9 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
+session_start();
+session_unset();
+session_destroy();
 header('Location: index.php');
 } 
 	?>
