@@ -2,7 +2,8 @@
 include 'api-display.php';
 //echo $client_token;
 if(isset($_POST['logout'])) {
-
+ 
+header('Location: index.php');
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/revoke-self');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -16,7 +17,7 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-header('Location: index.php');
+
 exit();
 }
 ?>
