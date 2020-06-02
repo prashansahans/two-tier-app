@@ -15,8 +15,8 @@
 <p>Click On Names</p>
 <?php
 $Vault_TOKEN=$_ENV['Vault_Root_Token'];
+if($client_token == null ){
 $ch = curl_init();
-
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/create/apps-creds-role');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -56,7 +56,7 @@ if (curl_errno($ch)) {
 }
 curl_close($ch);
 //echo $final_result;	
-	
+}	
 $json_var=json_decode($final_result, true);
 
 $host = $_ENV['MYSQL_SERVICE'];
