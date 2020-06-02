@@ -79,12 +79,12 @@ if (!$conn) {
     echo "Connection failed: " . mysqli_connect_error();
 }
 //echo "Connected successfully";
-$query = mysqli_query($conn,"select * from cbps");
-while ($row = mysqli_fetch_array($query)) {
-echo "<b><a href='api-display.php?id={$row['id']}'>{$row['emp_name']}</a></b>";
-echo "<br />";
-echo "<br />";
-}
+//$query = mysqli_query($conn,"select * from cbps");
+//while ($row = mysqli_fetch_array($query)) {
+//echo "<b><a href='api-display.php?id={$row['id']}'>{$row['emp_name']}</a></b>";
+//echo "<br />";
+//echo "<br />";
+//}
 ?>
 </div>
 <?php
