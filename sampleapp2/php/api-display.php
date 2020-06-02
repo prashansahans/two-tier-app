@@ -126,7 +126,7 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 	
 	<div class="log">
 		
-			<a href='api-display.php?hello=true'>Logout</a></div>
+			<a href='index.php?hello=true'>Logout</a></div>
 		
 
 <?php
