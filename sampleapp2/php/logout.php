@@ -1,6 +1,6 @@
 <?php
 include 'api-display.php';
-echo $client_token;
+//echo $client_token;
 if(isset($_POST['logout'])) {
 
 $ch = curl_init();
