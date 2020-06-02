@@ -123,7 +123,7 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 </div>
 <div class="clear"></div>
 </div>
-	<div class="log"><a href="logout.php" tite="Logout" name="logout">Logout</a></div>
+	<div class="log"><input type="button" tite="Logout" name="logout">Logout</a></div>
 
 </div>
 	<?php
@@ -142,6 +142,8 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
+header('Location: index.php');
+exit();
 
 }
 	?>
