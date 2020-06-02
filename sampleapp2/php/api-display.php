@@ -126,12 +126,14 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 	
 	<div class="log">
 		<form method="post">
-			<input type="submit" name="logout" value="logout"/> </div>
+			<a href='index.php?hello=true'>Logout</a></div>
 		</form>
 
 <?php
-if(isset($_POST['logout'])) { 
-
+if(isset($_GET['hello'])) { 
+	runMyFunction();
+}
+function runMyFunction(){
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/revoke-self');
@@ -148,7 +150,6 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-header('Location: index.php');
 } 
 ?>
 </div>
