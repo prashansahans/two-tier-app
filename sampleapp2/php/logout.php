@@ -18,4 +18,5 @@ if (curl_errno($ch)) {
 curl_close($ch);
 header('Location: index.php');
 exit();
+}
 ?>
