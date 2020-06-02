@@ -123,7 +123,12 @@ while ($row1 = mysqli_fetch_assoc($query1)) {
 </div>
 <div class="clear"></div>
 </div>
-	<div class="log"><input type="submit" name="logout" value="logout"/> </div>
+	
+	<div class="log">
+		<form method="post">
+			<input type="submit" name="logout" value="logout"/> </div>
+		</form>
+
 	<?php
 	 if(isset($_POST['logout'])) { 
             echo "This is Button1 that is selected"; 
