@@ -142,10 +142,11 @@ curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.clust
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, array());
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"token\":\"$client_token\"}");
+
 
 $headers = array();
-$headers[] = 'X-Vault-Token:'.$client_token;
+$headers[] = 'X-Vault-Token:'.$Vault_TOKEN;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $result1 = curl_exec($ch);
