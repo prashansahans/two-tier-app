@@ -140,12 +140,12 @@ curl_setopt($ch, CURLOPT_POST, 1);
 $headers = array();
 $headers[] = 'X-Vault-Token:'.$client_token;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-header('Location: index.php');
 $result = curl_exec($ch);
 if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
+header('Location: index.php');
 } 
 	?>
 </div>
