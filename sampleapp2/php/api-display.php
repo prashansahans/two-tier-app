@@ -13,7 +13,8 @@
 <div class="divB">
 <div class="divD">
 <p>Click On Names</p>
-<?php
+<?php 
+session_start();
 $Vault_TOKEN=$_ENV['Vault_Root_Token'];
 if (! empty($_SESSION['logged_in']))
 {
