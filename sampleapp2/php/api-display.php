@@ -153,7 +153,6 @@ if (curl_errno($ch)) {
 curl_close($ch);
 echo $result1;
 } 
-$_SESSION['logged_in']= false;
 ?>
 </div>
 	
