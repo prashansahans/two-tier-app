@@ -23,8 +23,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.clust
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,1);
-curl_setopt($ch,CURLOPT_CAINFO,'check.crt');
-curl_setopt($ch,CURLOPT_CAPATH,'check.crt');
+curl_setopt($ch,CURLOPT_CAINFO, getcwd() . "/opt/app-root/src/sampleapp2/php/check.crt);
+//curl_setopt($ch,CURLOPT_CAPATH,'check.crt');
 curl_setopt($ch, CURLOPT_POST, 1);
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"policies\": \"apps-creds-policy\",\"meta\": {\"user\": \"test\"},\"ttl\": \"1h\",\"renewable\": true}");
