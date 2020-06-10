@@ -38,7 +38,7 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-//echo $result;
+echo $result;
 $token_file=json_decode($result, true);
 $client_token=$token_file['auth']['client_token'];
 echo $client_token;
@@ -48,6 +48,10 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/secret/apps-creds');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
+curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,1);
+curl_setopt($ch,CURLOPT_CAINFO,'check.crt');
+curl_setopt($ch,CURLOPT_CAPATH,'check.crt');
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
 
