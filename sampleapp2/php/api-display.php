@@ -33,7 +33,7 @@ $headers = array();
 $headers[] = 'X-Vault-Token:'.$Vault_TOKEN;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-$result = curl_exrouter-default-svc-cluster-local.pemec($ch);
+$result = curl_exec($ch);
 if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
