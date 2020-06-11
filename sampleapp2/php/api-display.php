@@ -26,7 +26,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,1);
-curl_setopt($ch,CURLOPT_CAINFO,"/opt/app-root/src/sampleapp2/php/router-default-svc-cluster-local.pem");
+curl_setopt($ch,CURLOPT_CAINFO,"/opt/app-root/src/sampleapp2/php/");
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"policies\": [\"apps-creds-policy\"], \"meta\": {\"user\": \"armon\"},\"ttl\": \"1h\",\"renewable\": true}");
 
