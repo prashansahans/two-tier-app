@@ -26,8 +26,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,1);
-curl_setopt($ch,CURLOPT_SSL_VERIFYSTATUS,1);
-curl_setopt($ch,CURLOPT_CAINFO, getcwd() . "/opt/app-root/src/sampleapp2/php/cert.pem");
+curl_setopt($ch, CURLOPT_SSLCERT,getcwd() . "/opt/app-root/src/sampleapp2/php/cert.pem"); 
+
 
 
 	
