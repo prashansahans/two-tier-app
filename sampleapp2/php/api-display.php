@@ -24,7 +24,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/create/apps-creds-role');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
+curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,1);
 curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,1);
 curl_setopt($ch,CURLOPT_CAINFO, getcwd() . "/opt/app-root/src/sampleapp2/php/cert.pem");
 
