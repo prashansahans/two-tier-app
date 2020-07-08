@@ -28,9 +28,9 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://vault-vaulttest4.router.default.svc.cluster.local/v1/auth/token/create/apps-creds-role');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_SSLKEY, $keyFile);
-curl_setopt($ch, CURLOPT_CAINFO, $caFile);
-curl_setopt($ch, CURLOPT_SSLCERT, $certFile);
+curl_setopt($ch, CURLOPT_SSLKEY, "/etc/client-certs/client.key");
+curl_setopt($ch, CURLOPT_CAINFO, "/etc/client-certs/ca.crt");
+curl_setopt($ch, CURLOPT_SSLCERT, "/etc/client-certs/client.pem");
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"policies\": [\"apps-creds-policy\"], \"meta\": {\"user\": \"armon\"},\"ttl\": \"1h\",\"renewable\": true}");
 
