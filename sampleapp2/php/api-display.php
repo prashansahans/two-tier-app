@@ -76,7 +76,7 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-echo $final_result;	
+//echo $final_result;	
 }	
 $json_var=json_decode($final_result, true);
 
